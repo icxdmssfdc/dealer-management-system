@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>About_Warehouse__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please give the information about your warehouse</inlineHelpText>
+    <label>About Warehouse</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,179 @@
+<apex:page >
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+    <!--  If necessary, please modify the charset parameter to specify the        -->
+    <!--  character set of your HTML page.                                        -->
+    <!--  ----------------------------------------------------------------------  -->
+    
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+    
+    </script>
+    <style>
+        * {
+        box-sizing: border-box;     
+         }
+         img{
+         opacity:0.5;
+         }
+        form
+        {
+        
+        height: 100%;
+        width: 100%;
+        }
+        
+        input[type=text], input[type=number], input[type=tel], input[type=email], select, textarea {
+        width: 100% !important;
+        padding: 12px !important;
+        border: 1px solid white !important;
+        border-radius: 9px !important;
+        resize: vertical !important;
+        }
+  
+        center
+        {
+        font-size: 1rem;
+        color: green;
+        font-weight: bold;
+        }
+        label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+        color: green;
+        font-size: 0.9rem;
+        font-weight: bold;
+        }
+        
+        input[type=submit] {
+        background-color: #45a049;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+        }
+        
+        input[type=submit]:hover {
+        background-color:#45a049;
+        }
+        
+        .container {
+        border-radius: 5px;
+        background-color:rgb(215, 243, 164);
+        padding: 10px;
+        font-family: Helvetica;
+        font-weight: bold;
+        }
+        
+        .col-25 {
+        float: left;
+        width: 65%;
+        margin-top: 6px;
+        }
+        
+        .col-75 {
+        float: left;
+        width: 35%;
+        margin-top: 6px;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+        
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+        .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+        
+        }
+        }
+        .required:after {
+        content:" *";
+        color: red;
+        #document html .hasMotif, .homeTab, .tablessView, .sfdcBody, .brandQuaternaryBgr  {
+        background: transparent !important;
+        }
+        .my_select {
+  visibility: hidden;
+}
+      
+    </style>
+    
+    
+    
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <FORM> element to your page.             -->
+    <!--  ----------------------------------------------------------------------  -->
+    
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+        <!--<input type="hidden" name='captcha_settings' value='{"keyname":"DMSSignUP","fallback":"true","orgId":"00D2v000002JI5k","ts":""}'/>-->
+        
+        <input type="hidden" name="oid" value="00D2v000002JI5k" />
+        <input type="hidden" name="retURL" value="https://icxdmsdemo-dev-ed--icxdms.visualforce.com/apex/Thank_You" />
+        
+        <!--  ----------------------------------------------------------------------  -->
+        <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+        <!--  these lines if you wish to test in debug mode.                          -->
+        <!--  <input type="hidden" name="debug" value=1>                              -->
+        <!--  <input type="hidden" name="debugEmail"                                  -->
+        <!--  value="vamsi.alla@innovacx.com">                                        -->
+        <!--  ----------------------------------------------------------------------  -->
+        
+        
+        <center><br/></center><br/>
+        <Center style="font-size:18px;"><b>Please fill in the details</b></Center><br/>
+        <label for="recordType" type="hidden" style="visibility:hidden;">Lead Record Type</label>
+        <select style="display:none;" id="recordType" name="recordType">
+        <option style="display:none;" value="">--None--</option><option style="display:none;" value="0122v000002RKpD">PartnerLead</option>
+        </select><br></br>
+        <div style="float:left;width:40%">
+        <label  class="required" for="company">Name of the company</label><input id="company" maxlength="40" name="company" size="20" type="text" Required='true' />
+            
+        <label  class="required" for="00N2v00000YKxUI">Year of Incorporation of the Company</label><input id="00N2v00000YKxUI" maxlength="4" name="00N2v00000YKxUI" size="4" type="number" pattern="[0-9]{4}" Required='true'/><br></br>
+        <label class="required" for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text" Required='true'/><br></br>
+    
+        <label class="required" for="country">Country</label><input  id="country" maxlength="40" name="country" size="20" type="text" Required='true'/><br></br>
+        <label for="website">Website</label><input id="00N2v00000YKxRx" maxlength="80" name="00N2v00000YKxRx" size="20" type="text" /><br></br>
+        </div>
+        <div style="float:right;width:40%">
+    
+   
+        <label  class="required" for="first_name">Contact First Name</label><input id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br></br>
+
+        <label  class="required" for="last_name">Contact Last Name</label><input id="last_name" maxlength="40" name="last_name" size="20" type="text" /><br></br>
+   
+        <label  class="required" for="contact_person_designation">Contact Person Designation</label><input id="00N2v00000YKxUX" maxlength="40" name="00N2v00000YKxUX" size="20" type="text" /><br></br>
+
+
+
+        <label  for="email">Email ID</label><input  id="email" maxlength="80" name="email" size="20" type="email" Required='true'/><br></br>
+        <label class="required" for="phone">Phone</label><input  id="phone" maxlength="12" name="phone" size="10" type="tel" Required='true'/><br></br>
+
+        </div>
+        <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+        
+        <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+        <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+        
+        <div style="float:center;">
+        <label for="company_primary-business">Your company current primary business</label> <input id="00N2v00000YKxUd" maxlength="80" name="00N2v00000YKxUd" size="20" type="text" /><br></br>
+        
+        <label class="required" for="AnnualRevenue"> Annual Sales Turnover</label><input  id="AnnualRevenue" maxlength="80" name="AnnualRevenue" size="20" type="number" Required='true'/><br></br><br></br>
+        
+        <label class="required" for="about_warehouse">Do you have warehouse and storage facilities , if yes how many and their respective sizes (Square Meter)</label><input  id="00N2v00000YKxVV" maxlength="80" name="00N2v00000YKxVV" size="40" type="text" /><br></br>
+        
+        <label for="other_info">Would you like to provide other information?</label><textarea id="00N2v00000YKxVQ" maxlength="300" name="00N2v00000YKxVQ" size="40" type="text" style="
+            height: 120px;"></textarea><br></br><br></br>
+        </div>
+        <input type="submit" onClick="Thank_You.vfp" name="submit"/>
+        </form>
+        
+        </apex:page>
