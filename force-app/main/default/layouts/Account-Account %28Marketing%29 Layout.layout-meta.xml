@@ -33,6 +33,10 @@
                 <behavior>Edit</behavior>
                 <field>Account_Rating__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Dealer__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
