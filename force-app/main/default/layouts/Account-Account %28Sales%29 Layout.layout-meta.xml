@@ -73,6 +73,10 @@
                 <behavior>Readonly</behavior>
                 <field>Available_Credit__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Billable_Amount__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

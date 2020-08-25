@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pain Management</fullName>
+        <default>false</default>
+        <label>Pain Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Congestion Management</fullName>
+        <default>false</default>
+        <label>Congestion Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Women’s Hygiene</fullName>
+        <default>false</default>
+        <label>Women’s Hygiene</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other Products</fullName>
+        <default>false</default>
+        <label>Other Products</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Beverages</fullName>
+        <default>false</default>
+        <label>Beverages</label>
+    </standardValue>
+</StandardValueSet>
