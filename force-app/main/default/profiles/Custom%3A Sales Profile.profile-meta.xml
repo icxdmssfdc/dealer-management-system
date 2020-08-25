@@ -317,6 +317,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Payment__c.Comments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Product2.Max_Qty__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -351,6 +356,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Order-Order Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Payment__c-Payment Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Product2-Product Layout</layout>
@@ -389,6 +397,10 @@
     </recordTypeVisibilities>
     <tabVisibilities>
         <tab>Inventory__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Payment__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
