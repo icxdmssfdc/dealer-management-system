@@ -30,6 +30,10 @@
                 <behavior>Edit</behavior>
                 <field>Partner_Dealer__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Available_Credit__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
