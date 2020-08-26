@@ -99,6 +99,10 @@
                 <behavior>Edit</behavior>
                 <field>Product_Return_Reason__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Scheme__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

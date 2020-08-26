@@ -1,6 +1,5 @@
 <apex:page>
 <!--<apex:page StandardController="Lead" extensions="AutoConvertLeads" action="{!LeadtoAccount}">
-    
-<apex:pageMessages />-->                                 
+<apex:pageMessages/>    -->                             
 </apex:page>
 

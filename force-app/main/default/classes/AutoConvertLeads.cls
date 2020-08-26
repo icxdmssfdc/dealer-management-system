@@ -7,21 +7,29 @@
 */
 Public class AutoConvertLeads
 {
-   /* private final Lead lead;
+  /*  private final Lead lead;
     public AutoConvertLeads(ApexPages.StandardController stdController){
         this.lead=(Lead)stdController.getRecord();
         System.debug('This is lead id');
         System.debug(lead.Id);
         //ID lid=lead.Id;
     }
-    public PageReference LeadtoAccount()//Id leadid)//I brought lead from lead obj(00Q2v00001ggujZEAQ)muraliraj name//0052v00000fdSY8AAM
+    public PageReference LeadToAccount()//Id leadid)//I brought lead from lead obj(00Q2v00001ggujZEAQ)muraliraj name//0052v00000fdSY8AAM
     {
         ID leadid1=lead.id;
-        Lead Leadinfo =[SELECT Id,Name, Company, RecordTypeId FROM Lead WHERE Id=: leadid1];//retrieves lead id
+        Lead LeadInfo =[SELECT Id,Name, Company, RecordTypeId FROM Lead WHERE Id=: leadid1];//retrieves lead id
+		
         LeadStatus CLeadStatus= [SELECT Id, MasterLabel FROM LeadStatus WHERE IsConverted=true];//closed-converted
+		
         List<Database.LeadConvert> Leadconvert = new List<Database.LeadConvert>();
-        RecordType leadtype = [SELECT Id,Name FROM RecordType WHERE sObjectType = 'Lead' AND Name = 'PartnerLead'];
-        RecordType AccountTypeId = [SELECT Id FROM RecordType WHERE sObjectType = 'Account' AND Name = 'Distributor'];
+		//Retrieve PartnerLead Recordtype Id
+		Id accRTIdPartLd = Schema.SObjectType.Lead.getRecordTypeInfosByName().get(ParterLead).getRecordTypeId();
+
+        RecordType leadtype = [SELECT Id,Name FROM RecordType WHERE Id=:accRTIdPartLd];
+		//Retrieve Account Dealer Recordtype Id
+		Id accRTIdDist = Schema.SObjectType.Lead.getRecordTypeInfosByName().get(Dealer).getRecordTypeId();                                                                                
+
+        RecordType AccountTypeId = [SELECT Id FROM RecordType WHERE Id=:accRTIdDist];
         UserRole portalRole = [Select Id From UserRole Where PortalType = 'None' Limit 1];
         Profile DMSPartnerProfileId = [Select Id from Profile where name = 'DMS - Partner Login'];
         Profile SystemAdminId = [Select Id from Profile where name = 'System Administrator'];
@@ -66,14 +74,10 @@ Public class AutoConvertLeads
             u.LastName = contactvals.LastName;
             u.Email=contactvals.Email;
             u.Username=System.now().millisecond() + u.FirstName + '@amruthanjan.com';//'contactvals.Name'+'@'+'amruthanjan'+'.'+'com';
-            u.CommunityNickname=contactvals.FirstName+contactvals.LastName+'nick';
-            //u.IsPortalEnabled=true;
-            //u.PortalRole=portalRole.id;
-            
+            u.CommunityNickname=contactvals.FirstName+contactvals.LastName+'nick';            
             u.ProfileId = DMSPartnerProfileId.Id;
             u.IsActive=true;
             u.ContactId=contactvals.Id;
-            //u.EmailEncodingKey='General US & Western Europe (ISO-8859-1, ISO-LATIN-1)';
             u.Alias = contactvals.LastName;
             u.TimeZoneSidKey='Asia/Kolkata';
             u.LocaleSidKey = 'en_US'; // Required
@@ -113,9 +117,6 @@ Public class AutoConvertLeads
         retPage.setRedirect(true);
 
         return retPage;
-               // return null;
     }
-               
-
-*/
+          */     
 }
