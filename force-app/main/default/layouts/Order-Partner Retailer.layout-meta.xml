@@ -71,10 +71,7 @@
                 <behavior>Readonly</behavior>
                 <field>Order_Type__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Promotional_Scheme__c</field>
-            </layoutItems>
+            
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
