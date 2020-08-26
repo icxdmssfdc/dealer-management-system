@@ -637,8 +637,6 @@
     </fieldPermissions>
     <fieldPermissions>
 <<<<<<< HEAD
-        <editable>true</editable>
-        <field>Scheme__c.Discount_Percentage__c</field>
 =======
         <editable>false</editable>
         <field>Order.Pending_Action_Date__c</field>
