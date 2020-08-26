@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Discount Type --></label>
+    <name>Discount_Type__c</name>
+    <picklistValues>
+        <masterLabel>Amount</masterLabel>
+        <translation><!-- Amount --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Coupon</masterLabel>
+        <translation><!-- Coupon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cross Product Offer</masterLabel>
+        <translation><!-- Cross Product Offer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Percentage</masterLabel>
+        <translation><!-- Percentage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quantity</masterLabel>
+        <translation><!-- Quantity --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

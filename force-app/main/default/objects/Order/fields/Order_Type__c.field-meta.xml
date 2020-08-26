@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <formula>Account.RecordType.Name</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>Order_Type</label>
+    <label>Type</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Text</type>
