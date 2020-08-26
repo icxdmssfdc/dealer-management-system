@@ -636,8 +636,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-<<<<<<< HEAD
-=======
         <editable>false</editable>
         <field>Order.Pending_Action_Date__c</field>
         <readable>true</readable>
@@ -645,7 +643,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Order.PoDate</field>
->>>>>>> 71cead663ad63b21769b89a20fbdd0ee6fe9a736
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
