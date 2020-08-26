@@ -436,16 +436,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Issued_Coupon__c.Valid_From__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Issued_Coupon__c.Valid_Upto__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Lead.About_Warehouse__c</field>
         <readable>true</readable>
@@ -651,11 +641,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.Promotional_Scheme__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Order.Retailer_Account__c</field>
         <readable>true</readable>
@@ -764,9 +749,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Inventory__c-Inventory Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Issued_Coupon__c-Issued Coupon Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Lead-Lead Layout</layout>
