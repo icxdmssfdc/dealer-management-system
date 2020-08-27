@@ -68,4 +68,12 @@
         <name>DMS</name>
         <type>CustomApplication</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>ICXDMSHomePage</name>
+        <type>Network</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>ICXDMS</name>
+        <type>Network</type>
+    </appMenuItems>
 </AppMenu>
