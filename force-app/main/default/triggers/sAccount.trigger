@@ -18,6 +18,9 @@ trigger sAccount on Account (before insert, before update) {
                 }
             }
         }
+        //List<Account> accnts = Trigger.new;
+        //SaccountTrigger.sAccountTrigger(accnts);
+
     }
     if(Trigger.isBefore && Trigger.isUpdate){
         for(Account record: Trigger.new) {

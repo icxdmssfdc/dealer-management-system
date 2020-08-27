@@ -3,14 +3,12 @@
 * Created:- 
 * Last Updated:- 
 * Feature:- 
-* Description:- 
+* Description:- This Class is created to update an Inventory of dealer once the Order is booked
 */
 public with sharing class sInventory_Update {
     public sInventory_Update() {
 
     }
-
-//This Class is created to update an Inventory of dealer once the Order is booked
     public void updateInventory(List<Order> Orderdata){
         System.debug('In Update Inventory method');
         String sOrderAccId = '';
