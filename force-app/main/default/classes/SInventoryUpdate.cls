@@ -1,20 +1,25 @@
 /*
-* Author:- Vaishnavi Gajawada
+* Author:- Somesh Mamidwar
 * Created:- 
 * Last Updated:- 
 * Feature:- 
 * Description:- 
 */
-public with sharing class sInventory_Update {
-    public sInventory_Update() {
+public without sharing class SInventoryUpdate {
+    public SInventoryUpdate() {
 
     }
 
-//This Class is created to update an Inventory of dealer once the Order is booked
-    public void updateInventory(List<Order> Orderdata){
+    public void updateInventory(List<Order> orderdata){
         System.debug('In Update Inventory method');
         String sOrderAccId = '';
-        for(Order order : Orderdata){
+
+        List<Id> accntId = new List<Id>();
+        List<Id> orderDataId = new List<Id>();
+
+        //List<Order> orderDataId = new List<Order>();
+        
+        for(Order order : orderdata){
             sOrderAccId = order.AccountId;
             
             // In Retailer Scenario
@@ -26,9 +31,9 @@ public with sharing class sInventory_Update {
                     //Fetching List of Order Items related to the Order
                     List<OrderItem> orderItems = [ SELECT Id, Quantity, Product2Id FROM OrderItem WHERE OrderId = :order.Id ];
                     
-                    List<Id> InvProdIds = new List<Id>();
+                    List<Id> invProdIds = new List<Id>();
                     for(OrderItem oi : orderItems){
-                        InvProdIds.add(oi.Product2Id);
+                        invProdIds.add(oi.Product2Id);
                     }
                     
                     map<Id, OrderItem> ordProdDetails = new map<Id, OrderItem>();
@@ -142,4 +147,5 @@ public with sharing class sInventory_Update {
             }
         }
     }
+            
 }
