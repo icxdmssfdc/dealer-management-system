@@ -4,54 +4,38 @@
     <containerType>Network</containerType>
     <label>Default Navigation</label>
     <navigationMenuItem>
-        <label>Sales</label>
-        <position>0</position>
-        <publiclyAvailable>false</publiclyAvailable>
-        <subMenu>
-            <navigationMenuItem>
-                <label>Leads</label>
-                <position>0</position>
-                <publiclyAvailable>false</publiclyAvailable>
-                <target>Lead</target>
-                <type>SalesforceObject</type>
-            </navigationMenuItem>
-            <navigationMenuItem>
-                <label>Deals</label>
-                <position>1</position>
-                <publiclyAvailable>false</publiclyAvailable>
-                <target>Opportunity</target>
-                <type>SalesforceObject</type>
-            </navigationMenuItem>
-        </subMenu>
-        <type>MenuLabel</type>
-    </navigationMenuItem>
-    <navigationMenuItem>
-        <label>Marketing</label>
+        <label>Retail Orders</label>
         <position>1</position>
         <publiclyAvailable>false</publiclyAvailable>
-        <subMenu>
-            <navigationMenuItem>
-                <label>Campaigns</label>
-                <position>0</position>
-                <publiclyAvailable>false</publiclyAvailable>
-                <target>Campaign</target>
-                <type>SalesforceObject</type>
-            </navigationMenuItem>
-            <navigationMenuItem>
-                <label>MDF &amp; Coop</label>
-                <position>1</position>
-                <publiclyAvailable>false</publiclyAvailable>
-                <target>/mdf</target>
-                <type>InternalLink</type>
-            </navigationMenuItem>
-        </subMenu>
-        <type>MenuLabel</type>
+        <target>Order</target>
+        <type>SalesforceObject</type>
     </navigationMenuItem>
     <navigationMenuItem>
-        <label>Resources</label>
+        <label>My Orders</label>
         <position>2</position>
         <publiclyAvailable>false</publiclyAvailable>
-        <target>/files</target>
-        <type>InternalLink</type>
+        <target>Order</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Inventory</label>
+        <position>3</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>Inventory__c</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Cases</label>
+        <position>4</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>Case</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Contact Us</label>
+        <position>5</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>https://www.amrutanjan.com/contact.html</target>
+        <type>ExternalLink</type>
     </navigationMenuItem>
 </NavigationMenu>
