@@ -7,7 +7,8 @@
 */
 trigger sAccount on Account (before insert, before update) {
     if(Trigger.isBefore && Trigger.isInsert){
-            SaccountTrigger.sAccountTrgInsertHelper(Trigger.new);
+        SaccountTrigger sAccountTriggerCls = new SaccountTrigger();
+        sAccountTriggerCls.sAccountTrgInsertHelper(Trigger.new);         
     }
 
     if(Trigger.isBefore && Trigger.isUpdate){

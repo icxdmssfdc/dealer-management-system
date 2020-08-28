@@ -14,9 +14,12 @@ public without sharing class SInventoryUpdate {
         System.debug('In Update Inventory method');
         String sOrderAccId = '';
 
-        for(Order order : orderdata){
         List<Id> accntId = new List<Id>();
         List<Id> orderDataId = new List<Id>();
+
+        for(Order order : orderdata){
+       
+            orderDataId.add(order.Id);
         
 
         }
