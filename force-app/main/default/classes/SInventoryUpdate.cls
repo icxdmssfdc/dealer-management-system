@@ -3,7 +3,7 @@
  * Created:- 28-08-2020
  * Last Updated:- 
  * Feature:- 
- * Description:- To Update an Inventory on Order Creation
+ * Description:- To Update an Inventory at Dealer account  on Order Creation
  */
 public without sharing class SInventoryUpdate {
 
