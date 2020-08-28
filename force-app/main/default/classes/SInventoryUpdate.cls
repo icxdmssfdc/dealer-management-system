@@ -14,11 +14,16 @@ public without sharing class SInventoryUpdate {
         System.debug('In Update Inventory method');
         String sOrderAccId = '';
 
+        for(Order order : orderdata){
         List<Id> accntId = new List<Id>();
         List<Id> orderDataId = new List<Id>();
-
-        //List<Order> orderDataId = new List<Order>();
         
+
+        }
+
+        List<Order> orderListData = new List<Order>();
+        orderListData = [select Id,AccountId from Order where Id in :orderDataId];
+
         for(Order order : orderdata){
             sOrderAccId = order.AccountId;
             
