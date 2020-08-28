@@ -2,7 +2,7 @@
 * Author:- Somesh Mamidwar
 * Created:- 26-08-2020
 * Last Updated:- 
-* Feature:- Account Trigger
+* Feature:- Account Trigger created
 * Description:- 
 */
 trigger sAccount on Account (before insert, before update) {

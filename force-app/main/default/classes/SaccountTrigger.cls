@@ -43,7 +43,7 @@ public without sharing class SaccountTrigger {
         }
 
     }
-
+    
     public  void sAccountTrgUpdateHelper(List < Account > accountData){
 
         List < Id > accntIds = new List < Id > ();
