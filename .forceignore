@@ -12,12 +12,8 @@ package.xml
 **/__tests__/**
 
 force-app/main/default/appMenus/AppSwitcher.appMenu-meta.xml
-<<<<<<< HEAD
 force-app/main/default/profiles/ICXDMS Profile.profile-meta.xml
 force-app/main/default/profiles/ICXDMSHomePage Profile.profile-meta.xml
 force-app/main/default/navigationMenus
-
-=======
 force-app/main/default/navigationMenus/Default_Navigation.navigationMenu-meta.xml
 force-app/main/default/navigationMenus/Default_Navigation1.navigationMenu-meta.xmlexport
->>>>>>> 9a7252096a6834f2a7b4109fee90a6a1c7e318f6

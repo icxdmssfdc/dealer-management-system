@@ -11,7 +11,6 @@ public without sharing class SaccountTrigger {
         List < Id > parAccntIds = new List < Id > ();
         List < Account > parentAccList = new List<Account>();
         Map<Id, Account> mapParentAccount = new Map<Id, Account>();
-        
         for (Account acc: accountData) {
             parAccntIds.add(acc.ParentId);
         }
