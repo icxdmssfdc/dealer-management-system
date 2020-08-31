@@ -27,7 +27,7 @@ public without sharing class SInventoryUpdate {
 
         if (Schema.sObjectType.Account.fields.ParentId.isAccessible()) {
             // accDetails = [Select Id, ParentId from Account where Id in: accIds];
-            accDetails = new Map<ID, Account>([Select Id, ParentId from Account where Id in: accIds]);
+            accDetails = new Map<Id,Account>([Select Id, ParentId from Account where Id in: accIds]);
         }
 
         for (Order order: orderdata) {
