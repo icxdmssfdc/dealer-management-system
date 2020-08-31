@@ -25,8 +25,9 @@ public without sharing class SInventoryUpdate {
             orderIds.add(order.Id);
         }
 
-        if (Schema.sObjectType.Account.fields.ParentId.isReadable()) {
-            accDetails = [Select Id, ParentId from Account where Id in: accIds];
+        if (Schema.sObjectType.Account.fields.ParentId.isAccessible()) {
+            // accDetails = [Select Id, ParentId from Account where Id in: accIds];
+            accDetails = new Map<ID, Account>([Select Id, ParentId from Account where Id in: accIds]);
         }
 
         for (Order order: orderdata) {
@@ -37,7 +38,7 @@ public without sharing class SInventoryUpdate {
             }
         }
 
-        if (Schema.sObjectType.OrderItem.fields.Product2Id.isReadable() && Schema.sObjectType.OrderItem.fields.Quantity.isReadable()) {
+        if (Schema.sObjectType.OrderItem.fields.Product2Id.isAccessible() && Schema.sObjectType.OrderItem.fields.Quantity.isAccessible()) {
             orderItems = [SELECT Id, Quantity, Product2Id FROM OrderItem WHERE OrderId in: orderIds];
         }
 
@@ -46,21 +47,21 @@ public without sharing class SInventoryUpdate {
             ordProdDetails.put(oi.Product2Id, oi);
         }
 
-        if (Schema.sObjectType.Inventory__c.fields.Product__c.isReadable() && Schema.sObjectType.Shipment_Quantity__c.fields.Product__c.isReadable()) {
+        if (Schema.sObjectType.Inventory__c.fields.Product__c.isAccessible() && Schema.sObjectType.Inventory__c.fields.Product__c.isAccessible()) {
             invItems = [SELECT Id, Product__c, Distributor__c, Shipment_Quantity__c FROM Inventory__c WHERE Product__c in: InvProdIds];
         }
 
         for (Order order: orderdata) {
             //Get Order Related OrderItems
             for (OrderItem oi: orderItems) {
-                if (oi.Order == order.Id) {
+                if (oi.OrderId == order.Id) {
                     relatedOrderItems.add(oi);
                 }
             }
 
             for (OrderItem oi: relatedOrderItems) {
                 for (Inventory__c inv: invItems) {
-                    if (inv.Distributor__c == order.Account && inv.Product__c == oi.Product2Id) {
+                    if (inv.Distributor__c == order.AccountId && inv.Product__c == oi.Product2Id) {
                         if (order.Order_Type__c == 'Retailer') {
                             if (order.Status == 'Booked') {
                                 Decimal qty = ordProdDetails.get(inv.Product__c).Quantity;
