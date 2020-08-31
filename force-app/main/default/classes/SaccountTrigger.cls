@@ -9,21 +9,20 @@ public without sharing class SaccountTrigger {
     public  void sAccountTrgInsertHelper(List < Account > accountData) {
         //Recomondation to not write SOQL Solution
         List < Id > parAccntIds = new List < Id > ();
+        List < Account > parentAccList = new List<Account>();
+        Map<Id, Account> mapParentAccount = new Map<Id, Account>();
         for (Account acc: accountData) {
             parAccntIds.add(acc.ParentId);
         }
         //Validating CRUD permission before SOQL/DML operation Solution
-      /*  if (
+        if (
             Account.SObjectType.getDescribe().isAccessible() && Schema.SObjectType.Account.fields.Name.isAccessible()
         ) {
             // Defining a List object of Parent Accounts to store 
-            List < Account > parentAccList = [Select Id, Partner_Dealer__c from Account where Id in: parAccntIds];
-        }*/
-
-        List < Account > parentAccList = [Select Id, Partner_Dealer__c from Account where Id in: parAccntIds];
+             parentAccList = [Select Id, Partner_Dealer__c from Account where Id in: parAccntIds];
+        }
 
           // Defining a Map object to store a key,value pair of child and Parent Accounts
-            Map<Id, Account> mapParentAccount = new Map<Id, Account>();
             For (Account acc : parentAccList) {
                // store Accnt Id and Account objects for all the matched accounts
              mapParentAccount.put(acc.Id,acc);
