@@ -1,7 +1,7 @@
 {
   "orgName": "vamsialla company",
   "edition": "Developer",
-  "features": ["Communities"],
+  "features": [Communities],
 
   "settings": {
     "communitiesSettings": {
