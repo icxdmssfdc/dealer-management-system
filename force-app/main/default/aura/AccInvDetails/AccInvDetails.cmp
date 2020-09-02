@@ -1,0 +1,71 @@
+<aura:component implements="lightning:availableForFlowScreens,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" controller="sInventoryDetails">
+    <aura:attribute name='sInvList' type='Inventory__c' description = 'Returned list from server side controller'/>
+    <aura:attribute name='recordId' type='Id' description = 'hold the current record Id' />
+    <aura:attribute name="issearching"    type="Boolean" default="false"/>
+    <aura:attribute name="spinnerWaiting" type="Boolean" default="false"/>
+     <aura:attribute name="enableOrderButton"  type="Boolean" default="true"/>
+    <aura:handler name='init' value='{!this}' action='{!c.onInit}' description = 'Trigger defined action on initialization of component'/>
+    
+    <lightning:card title="Inventory">
+        <aura:set attribute="actions">
+            <lightning:button label="Generate Order" onclick="{!c.createOrder}"/>
+        </aura:set>
+        <div style="padding:10px" onkeyup="{! c.handleKeyUp }">
+            <lightning:input
+                             aura:id="enter-search"
+                             name="enter-search"
+                             label="Search when user hits the 'enter' key"
+                             isLoading="{! v.issearching }"
+                             type="search"
+                             />
+        </div>
+        <div style="height:300px;overflow:auto;">
+            <p class="slds-var-p-horizontal_small">
+                <aura:iteration items="{!v.sInvList}" var="invProduct" indexVar="index">
+                    <lightning:card  title="{!invProduct.Product__r.Name}">
+                        <aura:set attribute="actions">
+                            <lightning:input type="checkbox-button" label="Add Product" name="AddProduct" checked="{!invProduct.isSelected}"/>
+                        </aura:set>
+                        <div class="c-container">
+                            <lightning:layout >
+                                <lightning:layoutItem padding="around-small">
+                                    <div class="header-column">
+                                        <lightning:input type="number" name="OnHandQty" label="In-Hand Quantity" disabled="true" value="{!invProduct.Current_OnHand_Qty__c}"/>
+                                    </div>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem padding="around-small">
+                                    <div class="header-column">
+                                        <lightning:input type="number" name="OrderQty" label="Recommend Quantity" value="{!invProduct.Next_Order_Qty__c}"/>
+                                    </div>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem padding="around-small">
+                                    <div class="header-column">
+                                        <lightning:input type="number" name="OrderQty" label="Minimum Quantity" disabled="true" value="{!invProduct.Minimum_Qty__c}"/>
+                                    </div>
+                                </lightning:layoutItem>
+                                
+                           </lightning:layout>
+                           <lightning:layout >
+                                <lightning:layoutItem padding="around-small">
+                                    <div class="header-column">
+                                        <lightning:input type="text" name="productClassfication" disabled="true" label="Classfication" value="{!invProduct.Product__r.Product_Classification__c}"/>
+                                    </div>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem padding="around-small">
+                                    <div class="header-column">
+                                        <lightning:input type="Date" name="lastModifiedDate" disabled="true" value="{!invProduct.LastModifiedDate}" label="Last Updated" />
+                                    </div>
+                                </lightning:layoutItem>
+                                <lightning:layoutItem padding="around-small">
+                                    <div class="header-column">
+                                        <lightning:input type="number" name="OrderQty" label="Maximum Quantity" disabled="true" value="{!invProduct.Maximum_Qty__c}"/>
+                                    </div>
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                        </div>
+                    </lightning:card>
+                </aura:iteration>
+            </p>
+        </div>
+    </lightning:card>
+</aura:component>

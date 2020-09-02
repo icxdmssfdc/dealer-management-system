@@ -11,6 +11,5 @@ SCaseHelper caseObj=new SCaseHelper();
 List<Case> v1 = Trigger.new;
 caseObj.sCaseTgrHelperClass(v1);                 
     }
- 
 }
 

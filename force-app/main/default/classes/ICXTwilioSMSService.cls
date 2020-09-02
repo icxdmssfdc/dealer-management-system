@@ -3,7 +3,7 @@ public class ICXTwilioSMSService {
 	public static void send(String phNumber, String smsBody)
     {
         String accountSid = 'ACf21c3f326ff5c47439fe9bd505fcc83d';
-        string token = '33be4a27359b6fd9d034bcd7077b1dd7';
+        string token = '053db1caf3bcb372511e15d500d1cc2d';
         String fromPhNumber = '+12056773649';
         ErrorResponseWrapper erw;
         

@@ -1,0 +1,15 @@
+<apex:page standardController="Account" extensions="CreditMeterGraphic">
+    <style>
+        html .brandQuaternaryBgr
+		{
+   			background-color: rgb(255, 255, 255) !important; 
+        }
+    </style>
+    <html>
+        <apex:chart height="180" width="400" animate="true" legend="true" data="{!data}">
+            <apex:axis type="Gauge" position="left" margin="-10" minimum="0" maximum="{!acc.Credit_Limit__c}"/> 
+            <apex:gaugeSeries dataField="credit" highlight="true" tips="true" donut="60" colorSet="#FF0000,#FACC2E,#31B404,#8A084B">
+            </apex:gaugeSeries>
+        </apex:chart>
+    </html>
+</apex:page>

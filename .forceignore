@@ -1,6 +1,6 @@
 # List files or directories below to ignore them when running force:source:push, force:source:pull, and force:source:status
 # More information: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_exclude_source.htm
-#
+
 
 package.xml
 
@@ -11,9 +11,9 @@ package.xml
 # LWC Jest
 **/__tests__/**
 
-force-app/main/default/appMenus/AppSwitcher.appMenu-meta.xml
-force-app/main/default/profiles/ICXDMS Profile.profile-meta.xml
-force-app/main/default/profiles/ICXDMSHomePage Profile.profile-meta.xml
-force-app/main/default/navigationMenus
-force-app/main/default/navigationMenus/Default_Navigation.navigationMenu-meta.xml
-force-app/main/default/navigationMenus/Default_Navigation1.navigationMenu-meta.xmlexport
+#force-app/main/default/appMenus/AppSwitcher.appMenu-meta.xml
+#force-app/main/default/profiles/ICXDMS Profile.profile-meta.xml
+#force-app/main/default/profiles/ICXDMSHomePage Profile.profile-meta.xml
+#force-app/main/default/navigationMenus
+#force-app/main/default/navigationMenus/Default_Navigation.navigationMenu-meta.xml
+#force-app/main/default/navigationMenus/Default_Navigation1.navigationMenu-meta.xmlexport
