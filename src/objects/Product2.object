@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Blurb__c</fullName>
+        <description>A shorter description for line items and the front of the Catalog mobile app.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Required for Product Catalog. A sentence that highlights the item in the Product Catalog.</inlineHelpText>
+        <label>Blurb</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Default_Price__c</fullName>
+        <description>Required for Product Catalog. This field allows you to have a default price and thus calculate the cost of a given order in the Catalog.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Required for Product Catalog. This field allows you to have a default price and thus calculate the cost of a given order in the Catalog.</inlineHelpText>
+        <label>Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Image_Document_ID__c</fullName>
+        <description>The Salesforce ID of the image document you wish to display in the Product Catalog.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Required for Product Catalog. The Salesforce ID of the image document you wish to display in the Product Catalog.</inlineHelpText>
+        <label>Image Document ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inventory__c</fullName>
+        <externalId>false</externalId>
+        <label>Inventory</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In Stock</fullName>
+                    <default>true</default>
+                    <label>In Stock</label>
+                </value>
+                <value>
+                    <fullName>Limited Availability</fullName>
+                    <default>false</default>
+                    <label>Limited Availability</label>
+                </value>
+                <value>
+                    <fullName>Out of Stock</fullName>
+                    <default>false</default>
+                    <label>Out of Stock</label>
+                </value>
+                <value>
+                    <fullName>On Backorder</fullName>
+                    <default>false</default>
+                    <label>On Backorder</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Max_Qty__c</fullName>
+        <description>The Maximum Quantity of Products</description>
+        <externalId>false</externalId>
+        <label>Maximum Qty</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Min_Qty__c</fullName>
+        <description>The Minimum Quantity of Products</description>
+        <externalId>false</externalId>
+        <label>Minimum Qty</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mobile_Ready__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates the Product is ready to use with the Catalog mobile app.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field must be CHECKED to show the product in the Product Catalog. Indicates the Product is ready to use with the Catalog mobile app.</inlineHelpText>
+        <label>Mobile Ready?</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Product_Classification__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Classification</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>A</fullName>
+                    <default>false</default>
+                    <label>A</label>
+                </value>
+                <value>
+                    <fullName>B</fullName>
+                    <default>false</default>
+                    <label>B</label>
+                </value>
+                <value>
+                    <fullName>C</fullName>
+                    <default>false</default>
+                    <label>C</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+</CustomObject>
