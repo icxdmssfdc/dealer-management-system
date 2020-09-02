@@ -37,8 +37,7 @@ script:
 - sfdx force:apex:test:run -u ciorg --wait 10
 - sfdx force:source:convert -r $CodeDIR -d $DEPLOYDIR
 # Authorize target deployment org
-# - sfdx force:auth:jwt:grant --instanceurl https://login.salesforce.com  --clientid $CONSUMERKEY --jwtkeyfile assets/server.key --username $USERNAME --setalias DevHub --wait 10
-- sfdx force:org:display -u HubOrg
+- sfdx force:auth:jwt:grant --instanceurl https://login.salesforce.com  --clientid $CONSUMERKEY --jwtkeyfile assets/server.key --username $USERNAME --setalias DevHub
 # Deploy to target deployment org and run unit tests
-- sfdx force:mdapi:deploy --wait 10 --deploydir $DEPLOYDIR --targetusername HubOrg --testlevel $TESTLEVEL
+- sfdx force:mdapi:deploy --wait 10 --deploydir $DEPLOYDIR --targetusername DevHub --testlevel $TESTLEVEL
 - sfdx force:org:delete -u ciorg -p

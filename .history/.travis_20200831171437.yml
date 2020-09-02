@@ -24,7 +24,7 @@ before_script:
 # The before_script step initializes varibles used in the script step
 #
 # Assign variables
-- export CodeDIR=force-app/main/default
+- export CodeDIR=/force-app/main/default
 - export DEPLOYDIR=src
 - export TESTLEVEL=RunLocalTests
 - sfdx --version
@@ -35,10 +35,9 @@ script:
 - sfdx force:org:display -u ciorg
 - sfdx force:source:push -u ciorg
 - sfdx force:apex:test:run -u ciorg --wait 10
-- sfdx force:source:convert -r $CodeDIR -d $DEPLOYDIR
+- sfdx force:source:convert -r path/to/source -d 
 # Authorize target deployment org
-# - sfdx force:auth:jwt:grant --instanceurl https://login.salesforce.com  --clientid $CONSUMERKEY --jwtkeyfile assets/server.key --username $USERNAME --setalias DevHub --wait 10
-- sfdx force:org:display -u HubOrg
+- sfdx force:auth:jwt:grant --instanceurl https://login.salesforce.com  --clientid $CONSUMERKEY --jwtkeyfile assets/server.key --username $USERNAME --setalias DevHub
 # Deploy to target deployment org and run unit tests
-- sfdx force:mdapi:deploy --wait 10 --deploydir $DEPLOYDIR --targetusername HubOrg --testlevel $TESTLEVEL
+- sfdx force:mdapi:deploy --wait 10 --deploydir $DEPLOYDIR --targetusername DevHub --testlevel $TESTLEVEL
 - sfdx force:org:delete -u ciorg -p
