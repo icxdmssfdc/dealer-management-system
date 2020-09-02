@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Each</fullName>
+        <default>false</default>
+        <label>Each</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bottles</fullName>
+        <default>false</default>
+        <label>Bottles</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pieces</fullName>
+        <default>false</default>
+        <label>Pieces</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cottons</fullName>
+        <default>false</default>
+        <label>Cottons</label>
+    </standardValue>
+</StandardValueSet>

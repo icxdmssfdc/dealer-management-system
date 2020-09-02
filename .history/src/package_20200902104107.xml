@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types>
+    <name>CustomApplication</name>
+    <members>DMS</members>
+  </types>
+  <types>
+    <name>AuraDefinitionBundle</name>
+    <members>forgotPassword</members>
+    <members>loginForm</members>
+    <members>selfRegister</members>
+    <members>setExpId</members>
+    <members>setStartUrl</members>
+  </types>
+  <types>
+    <name>ApexClass</name>
+    <members>AutoConvertLeads</members>
+    <members>ChangePasswordController</members>
+    <members>ChangePasswordControllerTest</members>
+    <members>CommunitiesLandingController</members>
+    <members>CommunitiesLandingControllerTest</members>
+    <members>CommunitiesLoginController</members>
+    <members>CommunitiesLoginControllerTest</members>
+    <members>CommunitiesSelfRegConfirmController</members>
+    <members>CommunitiesSelfRegConfirmControllerTest</members>
+    <members>CommunitiesSelfRegController</members>
+    <members>CommunitiesSelfRegControllerTest</members>
+    <members>ForgotPasswordController</members>
+    <members>ForgotPasswordControllerTest</members>
+    <members>GetAllFields</members>
+    <members>ICXOrderNotifications</members>
+    <members>ICXTwilioSMSService</members>
+    <members>LightningForgotPasswordController</members>
+    <members>LightningForgotPasswordControllerTest</members>
+    <members>LightningLoginFormController</members>
+    <members>LightningLoginFormControllerTest</members>
+    <members>LightningSelfRegisterController</members>
+    <members>LightningSelfRegisterControllerTest</members>
+    <members>MyProfilePageController</members>
+    <members>MyProfilePageControllerTest</members>
+    <members>SInventoryTriggerHandler</members>
+    <members>SInventoryUpdate</members>
+    <members>SaccountTrigger</members>
+    <members>SiteLoginController</members>
+    <members>SiteLoginControllerTest</members>
+    <members>SiteRegisterController</members>
+    <members>SiteRegisterControllerTest</members>
+    <members>sInventoryDetails</members>
+    <members>sInventory_Update</members>
+  </types>
+  <types>
+    <name>ApexComponent</name>
+    <members>SiteFooter</members>
+    <members>SiteHeader</members>
+    <members>SiteLogin</members>
+    <members>SitePoweredBy</members>
+  </types>
+  <types>
+    <name>ContentAsset</name>
+    <members>banner_1</members>
+    <members>logoamrutanjan</members>
+    <members>ouridentity</members>
+  </types>
+  <types>
+    <name>FlexiPage</name>
+    <members>DMS_UtilityBar</members>
+  </types>
+  <types>
+    <name>Layout</name>
+    <members>Account-Account %28Marketing%29 Layout</members>
+    <members>Account-Account %28Sales%29 Layout</members>
+    <members>Account-Account %28Support%29 Layout</members>
+    <members>Account-Account Layout</members>
+    <members>Account-Dealer</members>
+    <members>Account-Retailer</members>
+    <members>Case-Case %28Marketing%29 Layout</members>
+    <members>Case-Case %28Sales%29 Layout</members>
+    <members>Case-Case %28Support%29 Layout</members>
+    <members>Case-Case Layout</members>
+    <members>Case-Credit Layout</members>
+    <members>Case-Credit Layout Internal</members>
+    <members>Case-Delayed Shipments</members>
+    <members>Case-Delayed Shipments Internal</members>
+    <members>Case-Goods Return</members>
+    <members>Case-Goods Return Internal</members>
+    <members>Case-Order Quality Case</members>
+    <members>Case-Order Quality Case Internal</members>
+    <members>Case-Retailer Scheme Case Layout</members>
+    <members>Case-Scheme Case Layout</members>
+    <members>Case-Scheme Case Layout Internal</members>
+    <members>CaseClose-Close Case Layout</members>
+    <members>Contact-Contact %28Marketing%29 Layout</members>
+    <members>Contact-Contact %28Sales%29 Layout</members>
+    <members>Contact-Contact %28Support%29 Layout</members>
+    <members>Contact-Contact Layout</members>
+    <members>Contact-Partner Contact Layout</members>
+    <members>Inventory__c-Dealer Inventory Layout</members>
+    <members>Inventory__c-Inventory Layout</members>
+    <members>Lead-Lead %28Marketing%29 Layout</members>
+    <members>Lead-Lead %28Sales%29 Layout</members>
+    <members>Lead-Lead %28Support%29 Layout</members>
+    <members>Lead-Lead Layout</members>
+    <members>Order-Dealer</members>
+    <members>Order-Order Layout</members>
+    <members>Order-Partner Dealer</members>
+    <members>Order-Partner Retailer</members>
+    <members>Order-ReadOnly DMS Dealer</members>
+    <members>Order-ReadOnly DMS Retailer</members>
+    <members>Order-Retailer</members>
+    <members>OrderItem-Order Product Layout</members>
+    <members>Payment__c-Payment Layout</members>
+    <members>Product2-Product Layout</members>
+    <members>Promotional_Offer__c-Promotional Offer Layout</members>
+    <members>Scheme__c-Coupon Scheme Layout</members>
+    <members>Scheme__c-Cross Product Offers</members>
+    <members>Scheme__c-Discount Amount Scheme</members>
+    <members>Scheme__c-Percentage Discount Layout</members>
+    <members>Scheme__c-Quantity Discount Layout</members>
+    <members>Scheme__c-Scheme Layout</members>
+    <members>Secondary_Sales__c-Secondary Sales Layout</members>
+  </types>
+  <types>
+    <name>NetworkBranding</name>
+    <members>cbICXDMS</members>
+    <members>cbICXDMSHomePage</members>
+  </types>
+ <types>
+    <name>CustomObjectTranslation</name>
+    <members>Scheme__c-en_US</members>
+  </types>
+  <types>
+    <name>CustomObject</name>
+    <members>Account</members>
+    <members>Case</members>
+    <members>Coupon__c</members>
+    <members>Inventory__c</members>
+    <members>Order</members>
+    <members>OrderItem</members>
+    <members>Payment__c</members>
+    <members>Promotional_Offer__c</members>
+    <members>Scheme__c</members>
+    <members>Secondary_Sales__c</members>
+  </types>
+  <types>
+    <name>CustomField</name>
+    <members>Account.AccountNumber</members>
+    <members>Account.AccountSource</members>
+    <members>Account.Account_Rating__c</members>
+    <members>Account.AnnualRevenue</members>
+    <members>Account.Available_Credit__c</members>
+    <members>Account.Billable_Amount__c</members>
+    <members>Account.BillingAddress</members>
+    <members>Account.ChannelProgramLevelName</members>
+    <members>Account.ChannelProgramName</members>
+    <members>Account.CleanStatus</members>
+    <members>Account.Credit_Limit__c</members>
+    <members>Account.Credit_Usage__c</members>
+    <members>Account.DandbCompanyId</members>
+    <members>Account.Dealer__c</members>
+    <members>Account.Description</members>
+    <members>Account.DunsNumber</members>
+    <members>Account.Fax</members>
+    <members>Account.GSTIN__c</members>
+    <members>Account.Geo_Location__c</members>
+    <members>Account.Industry</members>
+    <members>Account.IsConvertedFromLead__c</members>
+    <members>Account.IsCustomerPortal</members>
+    <members>Account.IsPartner</members>
+    <members>Account.Jigsaw</members>
+    <members>Account.NaicsCode</members>
+    <members>Account.NaicsDesc</members>
+    <members>Account.Name</members>
+    <members>Account.NumberOfEmployees</members>
+    <members>Account.OperatingHoursId</members>
+    <members>Account.Outstanding_Amount__c</members>
+    <members>Account.OwnerId</members>
+    <members>Account.Ownership</members>
+    <members>Account.ParentId</members>
+    <members>Account.Partner_Dealer__c</members>
+    <members>Account.Phone</members>
+    <members>Account.Primary_Contact__c</members>
+    <members>Account.Rating</members>
+    <members>Account.Sales_Rep__c</members>
+    <members>Account.ShippingAddress</members>
+    <members>Account.Sic</members>
+    <members>Account.SicDesc</members>
+    <members>Account.Site</members>
+    <members>Account.TickerSymbol</members>
+    <members>Account.Tier__c</members>
+    <members>Account.Tradestyle</members>
+    <members>Account.Type</members>
+    <members>Account.Website</members>
+    <members>Account.YearStarted</members>
+    <members>Case.AccountId</members>
+    <members>Case.AssetId</members>
+    <members>Case.BusinessHoursId</members>
+    <members>Case.Case_Issue__c</members>
+    <members>Case.ClosedDate</members>
+    <members>Case.Comments</members>
+    <members>Case.ContactEmail</members>
+    <members>Case.ContactFax</members>
+    <members>Case.ContactId</members>
+    <members>Case.ContactMobile</members>
+    <members>Case.ContactPhone</members>
+    <members>Case.Current_Credit_Limit__c</members>
+    <members>Case.Description</members>
+    <members>Case.Extension_To__c</members>
+    <members>Case.IsClosedOnCreate</members>
+    <members>Case.IsEscalated</members>
+    <members>Case.Order__c</members>
+    <members>Case.Origin</members>
+    <members>Case.OwnerId</members>
+    <members>Case.ParentId</members>
+    <members>Case.Priority</members>
+    <members>Case.Product_Quality_Issue__c</members>
+    <members>Case.Product_Return_Reason__c</members>
+    <members>Case.Reason</members>
+    <members>Case.Scheme__c</members>
+    <members>Case.Status</members>
+    <members>Case.Subject</members>
+    <members>Case.SuppliedCompany</members>
+    <members>Case.SuppliedEmail</members>
+    <members>Case.SuppliedName</members>
+    <members>Case.SuppliedPhone</members>
+    <members>Case.Type</members>
+    <members>Contact.Languages__c</members>
+    <members>Contact.Level__c</members>
+    <members>Contact.Primary_Contact__c</members>
+    <members>Coupon__c.Active__c</members>
+    <members>Coupon__c.Valid_From__c</members>
+    <members>Coupon__c.Valid_To__c</members>
+    <members>Inventory__c.Current_OnHand_Qty__c</members>
+    <members>Inventory__c.Dealer_Product_Price__c</members>
+    <members>Inventory__c.Distributor__c</members>
+    <members>Inventory__c.Maximum_Qty__c</members>
+    <members>Inventory__c.Minimum_Qty__c</members>
+    <members>Inventory__c.Next_Order_Qty__c</members>
+    <members>Inventory__c.OnHand_Qty__c</members>
+    <members>Inventory__c.Price_Book__c</members>
+    <members>Inventory__c.Product__c</members>
+    <members>Inventory__c.Receivable_Qty__c</members>
+    <members>Inventory__c.Required_Minimum_Qty__c</members>
+    <members>Inventory__c.Retailer_Price_Book__c</members>
+    <members>Inventory__c.Retailer_Price__c</members>
+    <members>Inventory__c.Shipment_Quantity__c</members>
+    <members>Inventory__c.Under_Minimum_Qty__c</members>
+    <members>Lead.About_Warehouse__c</members>
+    <members>Lead.Contact_Person_Designation__c</members>
+    <members>Lead.Primary__c</members>
+    <members>Lead.Year_of_Incorporation_of_the_Company__c</members>
+    <members>Lead.Your_company_current_primary_business__c</members>
+    <members>Order.AccountId</members>
+    <members>Order.AccountNumber</members>
+    <members>Order.Account__c</members>
+    <members>Order.ActivatedById</members>
+    <members>Order.ActivatedDate</members>
+    <members>Order.Amount_Due__c</members>
+    <members>Order.Amount_Paid__c</members>
+    <members>Order.Applied_Scheme__c</members>
+    <members>Order.BillToContactId</members>
+    <members>Order.Billable_Days__c</members>
+    <members>Order.BillingAddress</members>
+    <members>Order.Booking_Auto_Number__c</members>
+    <members>Order.Channel__c</members>
+    <members>Order.CompanyAuthorizedById</members>
+    <members>Order.CompanyAuthorizedDate</members>
+    <members>Order.ContractEndDate</members>
+    <members>Order.ContractId</members>
+    <members>Order.ContractName</members>
+    <members>Order.Coupon_Id__c</members>
+    <members>Order.Credit_Days__c</members>
+    <members>Order.Credit_Remaining__c</members>
+    <members>Order.CustomerAuthorizedById</members>
+    <members>Order.CustomerAuthorizedDate</members>
+    <members>Order.Delivered__c</members>
+    <members>Order.Delivery_Date__c</members>
+    <members>Order.Description</members>
+    <members>Order.Discount_Amount__c</members>
+    <members>Order.Due_Date__c</members>
+    <members>Order.EffectiveDate</members>
+    <members>Order.EndDate</members>
+    <members>Order.Estimated_Delivery_Date__c</members>
+    <members>Order.External_ERP_Id__c</members>
+    <members>Order.Grand_Total_Amount__c</members>
+    <members>Order.Header_Discount__c</members>
+    <members>Order.IsReductionOrder</members>
+    <members>Order.Is_Inventory_Order__c</members>
+    <members>Order.Line_Discount__c</members>
+    <members>Order.Name</members>
+    <members>Order.OpportunityId</members>
+    <members>Order.OrderReferenceNumber</members>
+    <members>Order.Order_Type__c</members>
+    <members>Order.OriginalOrderId</members>
+    <members>Order.OwnerId</members>
+    <members>Order.Partner_Dealer__c</members>
+    <members>Order.Pending_Action_Date__c</members>
+    <members>Order.PoDate</members>
+    <members>Order.PoNumber</members>
+    <members>Order.Pricebook2Id</members>
+    <members>Order.Promotional_Scheme__c</members>
+    <members>Order.Retailer_Account__c</members>
+    <members>Order.Sales_Representative__c</members>
+    <members>Order.ShipToContactId</members>
+    <members>Order.Ship_Date__c</members>
+    <members>Order.Shipment_Date__c</members>
+    <members>Order.ShippingAddress</members>
+    <members>Order.Status</members>
+    <members>Order.Stockist_Name__c</members>
+    <members>Order.TotalAmount</members>
+    <members>Order.Type</members>
+    <members>OrderItem.Applied_Offer__c</members>
+    <members>OrderItem.Applied_Scheme__c</members>
+    <members>OrderItem.AvailableQuantity</members>
+    <members>OrderItem.Cross_Discount_Product_Id__c</members>
+    <members>OrderItem.Description</members>
+    <members>OrderItem.Discount_Amount__c</members>
+    <members>OrderItem.EndDate</members>
+    <members>OrderItem.ListPrice</members>
+    <members>OrderItem.Offered_Quantity__c</members>
+    <members>OrderItem.OrderId</members>
+    <members>OrderItem.Order_Record_Type__c</members>
+    <members>OrderItem.OriginalOrderItemId</members>
+    <members>OrderItem.Product2Id</members>
+    <members>OrderItem.ProductCode</members>
+    <members>OrderItem.Quantity</members>
+    <members>OrderItem.ServiceDate</members>
+    <members>OrderItem.Shipping__c</members>
+    <members>OrderItem.TotalPrice</members>
+    <members>OrderItem.UnitPrice</members>
+    <members>Payment__c.Amount__c</members>
+    <members>Payment__c.Comments__c</members>
+    <members>Payment__c.Order_Number__c</members>
+    <members>Payment__c.Payment_Method__c</members>
+    <members>Payment__c.Status__c</members>
+    <members>Product2.Blurb__c</members>
+    <members>Product2.Default_Price__c</members>
+    <members>Product2.Image_Document_ID__c</members>
+    <members>Product2.Inventory__c</members>
+    <members>Product2.Max_Qty__c</members>
+    <members>Product2.Min_Qty__c</members>
+    <members>Product2.Mobile_Ready__c</members>
+    <members>Product2.Product_Classification__c</members>
+    <members>Promotional_Offer__c.Account__c</members>
+    <members>Promotional_Offer__c.Coupon__c</members>
+    <members>Promotional_Offer__c.Valid_From__c</members>
+    <members>Promotional_Offer__c.Valid_Upto__c</members>
+    <members>Scheme__c.Active__c</members>
+    <members>Scheme__c.Buy__c</members>
+    <members>Scheme__c.Coupon__c</members>
+    <members>Scheme__c.Discount_Amount__c</members>
+    <members>Scheme__c.Discount_Percentage__c</members>
+    <members>Scheme__c.Discount_Type__c</members>
+    <members>Scheme__c.End_Date__c</members>
+    <members>Scheme__c.Get_Product__c</members>
+    <members>Scheme__c.Get__c</members>
+    <members>Scheme__c.Header_Discount__c</members>
+    <members>Scheme__c.Image__c</members>
+    <members>Scheme__c.Order_Amount__c</members>
+    <members>Scheme__c.Product__c</members>
+    <members>Scheme__c.Scheme_Type__c</members>
+    <members>Scheme__c.Start_Date__c</members>
+    <members>Scheme__c.State__c</members>
+    <members>Scheme__c.Status__c</members>
+    <members>Secondary_Sales__c.Email__c</members>
+    <members>Secondary_Sales__c.Product__c</members>
+    <members>Secondary_Sales__c.Quantity__c</members>
+  </types>
+  <types>
+    <name>RecordType</name>
+    <members>Account.Dealer</members>
+    <members>Account.Retailer</members>
+    <members>Case.Credit_Extension</members>
+    <members>Case.Delayed_Shipments</members>
+    <members>Case.Goods_Quality</members>
+    <members>Case.Goods_Return</members>
+    <members>Case.Retailer_Scheme_Claim</members>
+    <members>Case.Scheme_Claim</members>
+    <members>Lead.Parter_Lead</members>
+    <members>Order.Dealer</members>
+    <members>Order.PartnerDealer</members>
+    <members>Order.PartnerRetailer</members>
+    <members>Order.ReadOnlyDMSDealer</members>
+    <members>Order.ReadOnlyDMSRetailer</members>
+    <members>Order.Retailer</members>
+    <members>Scheme__c.Amount_Discount</members>
+    <members>Scheme__c.Cross_Product_Offer</members>
+    <members>Scheme__c.Percentage_Discount</members>
+    <members>Scheme__c.Promotional_Offers</members>
+    <members>Scheme__c.Quantity_Discount</members>
+  </types>
+  <types>
+    <name>BusinessProcess</name>
+    <members>Case.Support Process</members>
+    <members>Lead.Lead Process</members>
+  </types>
+  <types>
+    <name>CompactLayout</name>
+    <members>Case.Case_Layout</members>
+    <members>Payment__c.Payment_Layout</members>
+  </types>
+  <types>
+    <name>ValidationRule</name>
+    <members>Case.Credit_Request_Amount</members>
+  </types>
+  <types>
+    <name>ListView</name>
+    <members>Inventory__c.All</members>
+    <members>Payment__c.All</members>
+  </types>
+  <types>
+    <name>ApexPage</name>
+    <members>AnswersHome</members>
+    <members>BandwidthExceeded</members>
+    <members>ChangePassword</members>
+    <members>CommunitiesLanding</members>
+    <members>CommunitiesLogin</members>
+    <members>CommunitiesSelfReg</members>
+    <members>CommunitiesSelfRegConfirm</members>
+    <members>CommunitiesTemplate</members>
+    <members>Exception</members>
+    <members>FileNotFound</members>
+    <members>ForgotPassword</members>
+    <members>ForgotPasswordConfirm</members>
+    <members>IdeasHome</members>
+    <members>InMaintenance</members>
+    <members>Lead_Conversion</members>
+    <members>MyProfilePage</members>
+    <members>RegistrationPage</members>
+    <members>SiteLogin</members>
+    <members>SiteRegister</members>
+    <members>SiteRegisterConfirm</members>
+    <members>SiteTemplate</members>
+    <members>StdExceptionTemplate</members>
+    <members>Unauthorized</members>
+    <members>UnderConstruction</members>
+  </types>
+  <types>
+    <name>Profile</name>
+    <members>Admin</members>
+    <members>Custom%3A Marketing Profile</members>
+    <members>Custom%3A Sales Profile</members>
+    <members>Custom%3A Support Profile</members>
+  </types>
+  <types>
+    <name>SiteDotCom</name>
+    <members>ICXDMS1</members>
+    <members>ICXDMSHomePage1</members>
+  </types>
+  <types>
+    <name>CustomSite</name>
+    <members>ICXDMS</members>
+    <members>ICXDMSHomePage</members>
+  </types>
+  <types>
+    <name>StandardValueSet</name>
+    <members>OrderStatus</members>
+    <members>Product2Family</members>
+    <members>QuantityUnitOfMeasure</members>
+  </types>
+  <types>
+    <name>StaticResource</name>
+    <members>SiteSamples</members>
+  </types>
+  <types>
+    <name>CustomTab</name>
+    <members>Inventory__c</members>
+    <members>Payment__c</members>
+  </types>
+  <types>
+    <name>ApexTrigger</name>
+    <members>sAccount</members>
+    <members>sCase</members>
+    <members>sInventory</members>
+  </types>
+  <version>47.0</version>
+</Package>
