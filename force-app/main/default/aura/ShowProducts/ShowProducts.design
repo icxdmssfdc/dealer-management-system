@@ -1,0 +1,5 @@
+<design:component >
+    <design:attribute name="PriceBookId" label="Price Book" />
+    <design:attribute name="SelectedProducts" label="Selected Products" />
+    <design:attribute name="accountId" label="Account" />
+</design:component>

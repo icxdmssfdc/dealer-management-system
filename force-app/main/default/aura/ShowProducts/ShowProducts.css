@@ -1,0 +1,8 @@
+@media screen and (max-width: 640px) {
+    .THIS .slds-table_header-fixed_container {
+        padding-top: 0px;
+    }
+    .THIS .slds-table_header-fixed {
+        padding-top: 2rem;
+    }
+}
