@@ -484,7 +484,7 @@
         <name>EnableNotifications</name>
     </userPermissions>
     <userPermissions>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
         <name>FieldServiceAccess</name>
     </userPermissions>
     <userPermissions>
