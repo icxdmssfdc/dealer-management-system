@@ -39,7 +39,7 @@ public without sharing class SInventoryUpdate {
         }
 
         if (Schema.sObjectType.OrderItem.fields.Product2Id.isAccessible() && Schema.sObjectType.OrderItem.fields.Quantity.isAccessible()) {
-            orderItems = [SELECT Id, Quantity, Product2Id FROM OrderItem WHERE OrderId in: orderIds];
+            orderItems = [SELECT Id, Quantity, Product2Id,OrderId FROM OrderItem WHERE OrderId in: orderIds];
         }
 
         for (OrderItem oi: orderItems) {
