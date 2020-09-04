@@ -14,8 +14,8 @@
         <isOptional>false</isOptional>
     </lookupFilter>
     <referenceTo>Account</referenceTo>
-    <relationshipLabel>Orders</relationshipLabel>
-    <relationshipName>Orders</relationshipName>
+    <relationshipLabel>Orders_ret</relationshipLabel>
+    <relationshipName>Orders_ret</relationshipName>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <type>Lookup</type>

@@ -1788,7 +1788,7 @@ Order Status : {!myVariable_current.Status}</stringValue>
         <object>Order</object>
     </recordUpdates>
     <startElementReference>isChangedDecision2_myRule_1_Status</startElementReference>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>myCollection_myRule_10_A1recipientIds</name>
         <dataType>String</dataType>
