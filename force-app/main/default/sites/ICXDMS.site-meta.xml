@@ -23,7 +23,7 @@
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>test-bczksq9hee9g@example.com</siteAdmin>
+    <siteAdmin>icx.salesforce@innovacx.com</siteAdmin>
     <siteType>ChatterNetwork</siteType>
     <subdomain>icx-partner-developer-edition</subdomain>
     <urlPathPrefix>icxdmspartner</urlPathPrefix>
