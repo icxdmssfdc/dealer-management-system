@@ -21,10 +21,11 @@ public with sharing class TestSaccountTrigger {
         query = 'select ' + accFields + ' from Account Where Id = \''+ retailerAcc.ParentId +'\' Limit 1';
         Account parAccount = Database.query(query);
         retOrder.Partner_Dealer__c = parAccount.Dealer__c;
+        system.debug('I am Query V'+parAccount);
         String v1 = 'assert';
-        System.assertEquals(null,retailerAcc.Dealer__c,v1);
+        System.assertEquals('Gajendra',retailerAcc.Dealer__c,v1);
         System.assertEquals(null,retOrder.Partner_Dealer__c,v1);
+        System.debug('checking for assert');
         
     }
 }
-
