@@ -10,8 +10,8 @@ public without sharing class ApplyOrderLineOffers {
     String offerFields = '';
     
     public ApplyOrderLineOffers() {
-        offerFields = GetAllFields.getAllObjectField('Offers__c');
-        String query = 'select ' + offerFields + ' from Offers__c where active__c = True AND Start_Date__c <= Today AND (End_Date__c = null OR End_Date__c >= Today) and Header_Discount__c = False';
+        offerFields = GetAllFields.getAllObjectField('Scheme__c');
+        String query = 'select ' + offerFields + ' from Scheme__c where active__c = True AND Start_Date__c <= Today AND (End_Date__c = null OR End_Date__c >= Today) and Header_Discount__c = False';
         offers = Database.query(query);
     }
     

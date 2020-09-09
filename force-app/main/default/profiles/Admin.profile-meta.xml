@@ -1,440 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
-    <applicationVisibilities>
-        <application>DMS</application>
-        <default>false</default>
-        <visible>true</visible>
-    </applicationVisibilities>
-    <applicationVisibilities>
-        <application>standard__LightningSales</application>
-        <default>false</default>
-        <visible>true</visible>
-    </applicationVisibilities>
     <classAccesses>
-        <apexClass>CheckProductInventory</apexClass>
+        <apexClass>ApplyOrderLineOffers</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>CreditMeterGraphic</apexClass>
+        <apexClass>CheckInCheckOutService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>ICXOrderNotifications</apexClass>
+        <apexClass>IntegrationHttpCalloutMock</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>ICXTwilioSMSService</apexClass>
+        <apexClass>TestApplyOrderLineItemOffers</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>SCaseHelper</apexClass>
+        <apexClass>TestDataFactory</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>SInventoryUpdate</apexClass>
+        <apexClass>TestFetchPriceBookProducts</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>SaccountTrigger</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>TestSaccountTrigger</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>TestsCase</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>sInventoryDetails</apexClass>
+        <apexClass>TestICXTwilioSMSService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Cart__c.Product__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Cart__c.Quantity__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Account__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.ActivatedById</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.ActivatedDate</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.Amount_Due__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.Amount_Paid__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.Applied_Offer__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Applied_Scheme__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.BillToContactId</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.Billable_Days__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.BillingAddress</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.Booking_Auto_Number__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Channel__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.CompanyAuthorizedById</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.CompanyAuthorizedDate</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.ContractEndDate</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.ContractName</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Coupon_Id__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.Credit_Days__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.Credit_Remaining__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.CustomerAuthorizedById</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.CustomerAuthorizedDate</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Delivered__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Delivery_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Description</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Discount_Amount__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.Due_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Estimated_Delivery_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.External_ERP_Id__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.Grand_Total_Amount__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Header_Discount__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Is_Inventory_Order__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Line_Discount__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Name</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.OpportunityId</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.OrderReferenceNumber</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.Order_Type__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Partner_Dealer__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.Pending_Action_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.PoDate</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.PoNumber</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Promotional_Scheme__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Retailer_Account__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Sales_Representative__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.ShipToContactId</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Ship_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Shipment_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.ShippingAddress</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.Stockist_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order.TotalAmount</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Order.Type</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Order_Setting__mdt.ORecordTypeId__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Pricebook_Setting__mdt.PBRecordTypeId__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Product2.Product_Classification__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>User.partner_dealer__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <layoutAssignments>
-        <layout>Account-Account Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Cart__c-Cart Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Contact-Contact Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Lead-Lead Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Order-Order Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Order-Order Layout</layout>
-        <recordType>Order.PartnerDealer</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Order-Order Layout</layout>
-        <recordType>Order.PartnerRetailer</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Order-Order Layout</layout>
-        <recordType>Order.ReadOnlyDMSDealer</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Order-Order Layout</layout>
-        <recordType>Order.ReadOnlyDMSRetailer</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Order-Retailer</layout>
-        <recordType>Order.Retailer</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Order_Setting__mdt-Order Setting Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Pricebook_Setting__mdt-Pricebook Setting Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Product2-Product Layout</layout>
-    </layoutAssignments>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>Cart__c</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>true</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
-        <object>Order</object>
-        <viewAllRecords>true</viewAllRecords>
-    </objectPermissions>
-    <pageAccesses>
-        <apexPage>CreditMeterGraphicVF</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <recordTypeVisibilities>
-        <default>true</default>
-        <recordType>Order.Dealer</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Order.PartnerDealer</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Order.PartnerRetailer</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Order.ReadOnlyDMSDealer</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Order.ReadOnlyDMSRetailer</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Order.Retailer</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <tabVisibilities>
-        <tab>Scheme__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>standard-Order</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>
@@ -574,6 +168,10 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+        <name>CreateWorkBadgeDefinition</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>CreateWorkspaces</name>
     </userPermissions>
     <userPermissions>
@@ -679,6 +277,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ExportReport</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>FieldServiceAccess</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -959,6 +561,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>SelectFilesFromSalesforce</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SendExternalEmailAvailable</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
