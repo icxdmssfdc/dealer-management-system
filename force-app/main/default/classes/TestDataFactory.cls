@@ -16,7 +16,7 @@ public without sharing class TestDataFactory {
         Account acc = new Account();
         acc.Name = 'Test Dealer Account';
         acc.recordTypeId = accDealerRectId;
-        acc.Credit_Limit__c=20000;
+        acc.Credit_Limit__c=200000;
         insert acc;
         return acc;
     }
@@ -32,7 +32,17 @@ public without sharing class TestDataFactory {
         insert acc;
         return acc;
     }
-
+    //This method is to create Contact
+    public static Contact createContact(Id accId)
+    {
+           Contact con = new Contact();
+           con.FirstName='Test';
+           con.LastName='Contact';
+           con.AccountId=accId;
+           insert con;
+        return con;
+    }
+        
     // This method is to create Product
     public static Product2 createProduct(String prodName)
     {
