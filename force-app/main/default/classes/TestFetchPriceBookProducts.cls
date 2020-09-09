@@ -26,7 +26,8 @@ public with sharing class TestFetchPriceBookProducts {
 		test.startTest();
         FetchPriceBookProducts.getProduts(standardPBId);
         test.stopTest();
-        
+        PricebookEntry pe=[SELECT UnitPrice FROM PricebookEntry WHERE Id=:pee.id];
+        system.assertEquals(100, pe.UnitPrice, 'unit price');
     }
     @isTest public static void cartprod(){
         //Distributor Account
@@ -62,9 +63,9 @@ public with sharing class TestFetchPriceBookProducts {
         ID DistAcc1=DistAcc.id;
 		test.startTest();
 		FetchPriceBookProducts.clearCart(DistAcc1) ;
-        test.stopTest();
+        //test.stopTest();
         system.debug('next thing');
-        test.startTest();
+        //test.startTest();
         FetchPriceBookProducts.insertLineItem(DistAcc1, painbalm.id, pee.id, 100,100,5);
         test.stopTest();
         
@@ -115,4 +116,3 @@ public with sharing class TestFetchPriceBookProducts {
 
 
 }
-

@@ -21,8 +21,9 @@
         painbalm.Min_Qty__c=180;
         insert painbalm;
         //standard pricebook
-        Pricebook2 standardPBook = [select id from Pricebook2 where isStandard=true limit 1];
-        PricebookEntry standardPrice = new PricebookEntry(Pricebook2Id = standardPBook.id, Product2Id = painbalm.id, UnitPrice = 100, IsActive = true, UseStandardPrice = false);//'01s2v00000L2BllAAF'
+        //Pricebook2 standardPBook = [select id from Pricebook2 where isStandard=true limit 1];
+        Id standardPBook=Test.getStandardPricebookId();
+        PricebookEntry standardPrice = new PricebookEntry(Pricebook2Id = standardPBook, Product2Id = painbalm.id, UnitPrice = 100, IsActive = true, UseStandardPrice = false);//'01s2v00000L2BllAAF'
         insert standardPrice;
         //dealer pricebook
         Pricebook2 standardPb=new Pricebook2(Name='Dealer',IsActive=true);//standardPb.IsStandard=true;
@@ -152,8 +153,9 @@ e.getMessage();
         painbalm.Min_Qty__c=180;
         insert painbalm;
         //standard pricebook
-        Pricebook2 standardPBook = [select id from Pricebook2 where isStandard=true limit 1];
-        PricebookEntry standardPrice = new PricebookEntry(Pricebook2Id = standardPBook.id, Product2Id = painbalm.id, UnitPrice = 100, IsActive = true, UseStandardPrice = false);//'01s2v00000L2BllAAF'
+       // Pricebook2 standardPBook = [select id from Pricebook2 where isStandard=true limit 1];
+        Id standardPBook =Test.getStandardPricebookId();
+        PricebookEntry standardPrice = new PricebookEntry(Pricebook2Id = standardPBook, Product2Id = painbalm.id, UnitPrice = 100, IsActive = true, UseStandardPrice = false);//'01s2v00000L2BllAAF'
         insert standardPrice;
         //dealer pricebook
         Pricebook2 standardPb=new Pricebook2(Name='Dealer',IsActive=true);//standardPb.IsStandard=true;
@@ -293,8 +295,9 @@ e.getMessage();
         painbalm.Min_Qty__c=180;
         insert painbalm;
         //standard pricebook
-        Pricebook2 standardPBook = [select id from Pricebook2 where isStandard=true limit 1];
-        PricebookEntry standardPrice = new PricebookEntry(Pricebook2Id = standardPBook.id, Product2Id = painbalm.id, UnitPrice = 100, IsActive = true, UseStandardPrice = false);//'01s2v00000L2BllAAF'
+        //Pricebook2 standardPBook = [select id from Pricebook2 where isStandard=true limit 1];
+        Id standardPBook=Test.getStandardPricebookId();
+        PricebookEntry standardPrice = new PricebookEntry(Pricebook2Id = standardPBook, Product2Id = painbalm.id, UnitPrice = 100, IsActive = true, UseStandardPrice = false);//'01s2v00000L2BllAAF'
         insert standardPrice;
         //dealer pricebook
         Pricebook2 standardPb=new Pricebook2(Name='Dealer',IsActive=true);//standardPb.IsStandard=true;
@@ -344,10 +347,8 @@ e.getMessage();
         
         o.Status = 'Confirmed';update o;
         if(o.Status == 'Confirmed') {
-            
-            System.assertEquals(225,newInv.Receivable_Qty__c);
+            Inventory__c invFields=[SELECT Receivable_Qty__c FROM Inventory__c WHERE id=:newInv.id];
+            System.assertEquals(225,invFields.Receivable_Qty__c);
         }
     }
 }
-
-

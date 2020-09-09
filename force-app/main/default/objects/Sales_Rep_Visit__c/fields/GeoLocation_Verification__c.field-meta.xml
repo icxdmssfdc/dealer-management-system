@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GeoLocation_Verification__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+ISPICKVAL(Location__c, &quot;Matched&quot;), IMAGE(&quot;/resource/1599571872000/green?&quot;,&quot;Green&quot;,30,30),
+IF(
+ISPICKVAL(Location__c, &quot;Unmatched&quot;), IMAGE(&quot;/resource/1599571542000/Red?&quot;, &quot;Yellow&quot;,30,30),
+IMAGE(&quot;img/samples/s.gif&quot;,&quot;Img&quot;)
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>GeoLocation Verification</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

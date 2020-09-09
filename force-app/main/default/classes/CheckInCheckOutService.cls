@@ -1,6 +1,6 @@
 public with sharing class CheckInCheckOutService {
    // public class CheckInCheckOutSerivce {
-      /*  @AuraEnabled
+        @AuraEnabled
         public static Map<String,Id> getCurrentEvent(Id userId,Id accountId){
             Map<String,Id> responseMap = new Map<String,Id>();
           //  Id eventId = null;
@@ -70,5 +70,5 @@ public with sharing class CheckInCheckOutService {
             
             return responseMap;
         }
-    //}*/
+    //}
 }

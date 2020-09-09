@@ -8,6 +8,7 @@ public with sharing class TestSaccountTrigger {
         String distAccID=distacc.id;
         //distibutor contact
         Contact c=new Contact(FirstName='Agarwal',LastName='Manish',AccountId=distAccID);
+        
         RecordType accRTRet=[SELECT Id FROM RecordType WHERE sObjectType = 'Account' AND Name = 'Retailer'];
         //retailer account
         Account retailerAcc=new Account(Name='shiva',ParentId=distAccID,recordTypeId=accRTRet.id);
@@ -20,11 +21,15 @@ public with sharing class TestSaccountTrigger {
         retOrder.Account__c = retailerAcc.ParentId;
         query = 'select ' + accFields + ' from Account Where Id = \''+ retailerAcc.ParentId +'\' Limit 1';
         Account parAccount = Database.query(query);
-        retOrder.Partner_Dealer__c = parAccount.Dealer__c;
+        //retOrder.Partner_Dealer__c = parAccount.Partner_Dealer__c;
         system.debug('I am Query V'+parAccount);
         String v1 = 'assert';
-        System.assertEquals('Gajendra',retailerAcc.Dealer__c,v1);
-        System.assertEquals(null,retOrder.Partner_Dealer__c,v1);
+        retailerAcc.ParentId=distacc.id;
+        update retailerAcc;
+        //Order OrdFields=[SELECT Partner_Dealer__c FROM Order WHERE id=:retOrder.id];
+        Account acFields=[SELECT Partner_Dealer__c FROM Account WHERE id=:retailerAcc.id];
+        System.assertEquals('Gajendra',parAccount.Name,v1);
+        //System.assertEquals('Gajendra',acFields.Partner_Dealer__c,v1);
         System.debug('checking for assert');
         
     }

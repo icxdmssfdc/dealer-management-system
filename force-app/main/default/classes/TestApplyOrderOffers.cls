@@ -59,9 +59,11 @@
         insert i;
         System.debug('total price is'+i.TotalPrice+'ret ord'+retailerOrder.TotalAmount);
         System.debug('inserted order id is'+i+'order is'+retailerOrder);
+        Order OrdFields=[SELECT Discount_Amount__c FROM Order WHERE Id=:retailerOrder.id];
     // System.assertEquals('Buy 1000 above Get 10% Off', retailerOrder.Applied_Offer__c,'percentoffer');//Scheme__c	'Buy 1000 above,Get 10% Off'
-          //System.assertEquals(1000,retailerOrder.Discount_Amount__c);
-        System.debug('discount amount is'+i.Discount_Amount__c);
+    System.debug('discount amount is'+OrdFields.Discount_Amount__c);     
+    System.assertEquals(1000,OrdFields.Discount_Amount__c);
+       
     }
     @isTest Public static void AmountCheck(){
         System.debug('I am from amountceck');
@@ -121,11 +123,15 @@
         //i.TotalPrice=i.Quantity*i.UnitPrice;
         //i.ListPrice=100;
         insert i;
+        Order OrdFields=[SELECT Discount_Amount__c FROM Order WHERE Id=:retailerOrder.id];
+        
+
         System.debug('Percentage amount offer total price is'+i.TotalPrice+'ret ord'+retailerOrder.TotalAmount);
         System.debug('inserted order id is'+i+'order is'+retailerOrder);
         //System.assertEquals('Buy1000aboveGet100back',retailerOrder.Applied_Offer__c,'');//1000 above,Get 10% Off'
-      //	System.assertEquals(100,retailerOrder.Discount_Amount__c,'amountoffer');
-        System.debug('discount is 100');
+      	
+        System.assertEquals(100,OrdFields.Discount_Amount__c,'amountoffer');
+        //System.debug('discount is 100');
     }
     @isTest Public static void CouponCheck(){
         //Distributor Account Insertion
@@ -198,7 +204,8 @@
         insert i;
         //em.debug('Percentage amount offer total price is'+i.TotalPrice+'ret ord'+retailerOrder.TotalAmount);
        //ystem.debug('inserted order id is'+i+'order is'+retailerOrder);
-    //    System.assertEquals('Buy100000getfreecoupon', retailerOrder.Applied_Offer__c,'couponoffer');//Scheme__c	'Buy 1000 above,Get 10% Off'
+        Order OrdFields=[SELECT Applied_Offer__c FROM Order WHERE Id=:retailerOrder.id];
+        System.assertEquals('Buy100000getfreecoupon', OrdFields.Applied_Offer__c,'couponoffer');//Scheme__c	'Buy 1000 above,Get 10% Off'
         System.debug('discount amount is'+retailerOrder.Discount_Amount__c);
        // Issued_Coupons__c isc=new Issued_Coupons__c();
         
@@ -207,5 +214,3 @@
        // }
     }
 }
-
-
