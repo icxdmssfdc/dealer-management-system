@@ -4,7 +4,12 @@ trigger sOrderItem on orderitem (before insert, before update, after insert, aft
 
         SOrderItemTriggerHandler ordItmTrgHandlerCls = new SOrderItemTriggerHandler();
         ordItmTrgHandlerCls.sOrderTrgIsBeforeHelper(Trigger.new);
-
+        
+        for(orderitem oi : Trigger.new){
+        ApplyOrderLineOffers ordOff=new ApplyOrderLineOffers();
+        ordOff.applyOffers(oi);
+    	}
+        
     }
 
     if (Trigger.isAfter){
@@ -13,6 +18,8 @@ trigger sOrderItem on orderitem (before insert, before update, after insert, aft
         ordItmTrgHandlerCls.sOrderTrgIsAfterHelper(Trigger.new,Trigger.old);
 
     }
+    
+    
 
 
 }

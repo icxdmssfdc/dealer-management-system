@@ -78,7 +78,7 @@
         offerAmount.Order_Amount__c=1000;
         offerAmount.Discount_Type__c='Amount';
         offerAmount.Discount_Amount__c=100;   
-        //offerAmount.End_Date__c=system.today()+20;
+        
         offerAmount.Header_Discount__c=True;
         offerAmount.Status__c='Approved';
         offerAmount.Active__c=true;
