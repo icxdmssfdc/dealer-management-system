@@ -5,10 +5,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>CheckInCheckOutService</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>IntegrationHttpCalloutMock</apexClass>
         <enabled>false</enabled>
     </classAccesses>
