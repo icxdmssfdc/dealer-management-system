@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SalesRep_Visit__c</fullName>
+    <externalId>false</externalId>
+    <label>SalesRep_Visit</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>SalesRep_Visit__c.CreatedById</field>
+            <operation>equals</operation>
+            <valueField>$User.Id</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>SalesRep_Visit__c</referenceTo>
+    <relationshipLabel>SalesRep_Expenses</relationshipLabel>
+    <relationshipName>SalesRep_Expenses</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>true</writeRequiresMasterRead>
+</CustomField>
