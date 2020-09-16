@@ -167,6 +167,21 @@
         <relatedList>RelatedOrderList</relatedList>
     </relatedLists>
     <relatedLists>
+        <fields>NAME</fields>
+        <fields>Total_Visit_Expenses__c</fields>
+        <fields>Visited_Date__c</fields>
+        <fields>CheckIn_Time__c</fields>
+        <fields>CheckOut_Time__c</fields>
+        <relatedList>SalesRep_Visit__c.Account__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>Coupon__c.NAME</fields>
+        <fields>Valid_From__c</fields>
+        <fields>Valid_Upto__c</fields>
+        <relatedList>Promotional_Offer__c.Account__c</relatedList>
+    </relatedLists>
+    <relatedLists>
         <fields>CASES.CASE_NUMBER</fields>
         <fields>NAME</fields>
         <fields>CASES.SUBJECT</fields>
