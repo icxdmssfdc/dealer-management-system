@@ -2,9 +2,16 @@ public class ICXTwilioSMSService {
     @future(callout = true)
 	public static void send(String phNumber, String smsBody)
     {
-        String accountSid = 'ACf21c3f326ff5c47439fe9bd505fcc83d';
-        string token = '053db1caf3bcb372511e15d500d1cc2d';
-        String fromPhNumber = '+12056773649';
+        String accountSid = '';
+        string token = '';
+        String fromPhNumber = '';  
+        
+        Twillio_Setting__mdt twilliodata =[SELECT accountSid__c,token__c,fromPhNumber__c from Twillio_Setting__mdt where MasterLabel = 'ICXTwilioSMSService'];
+        
+         accountSid = twilliodata.accountSid__c;
+         token = twilliodata.token__c;
+         fromPhNumber = twilliodata.fromPhNumber__c;
+        
         ErrorResponseWrapper erw;
         
         HttpRequest req = new HttpRequest();
