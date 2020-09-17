@@ -26,7 +26,6 @@ public without sharing class ApplyOrderLineOffers {
         Decimal freeQty = 0;
         Boolean qtyDiscApplied = false;
         
-       // for (OrderItem orderitem : ordersItems){
             if(orderitem != null && orderitem.Order_Record_Type__c == 'Retailer'){
                 discountAmount = 0;
                 for(Scheme__c offer : offers){
@@ -57,31 +56,7 @@ public without sharing class ApplyOrderLineOffers {
                     }else{
                         qualify = true;
                     }
-                    if(offer.Discount_Type__c == 'Amount' && qualify && !qtyApplied){
-                        discount = offer.Discount_Amount__c;
-                        if(discount > discountAmount){
-                            if(orderitem.ListPrice != null){
-                                unitPrice = ((orderitem.ListPrice * orderitem.Quantity) - discount) / orderitem.Quantity;
-                            }else{
-                                unitPrice = ((orderitem.UnitPrice * orderitem.Quantity) - discount) / orderitem.Quantity;
-                            }
-                            discountAmount = discount;
-                            appliedOffer = offer.Name;
-                            appliedOfferId = offer.Id;
-                        }
-                    }else if(offer.Discount_Type__c == 'Percentage' && qualify && !qtyApplied){
-                        discount = (orderitem.UnitPrice * orderitem.Quantity) * (offer.Discount_Percentage__c/100);
-                        if(discount > discountAmount){
-                            if(orderitem.ListPrice != null){
-                                unitPrice = ((orderitem.ListPrice * orderitem.Quantity) - discount) / orderitem.Quantity;
-                            }else{
-                                unitPrice = ((orderitem.UnitPrice * orderitem.Quantity) - discount) / orderitem.Quantity;
-                            }
-                            discountAmount = discount;
-                            appliedOffer = offer.Name;
-                            appliedOfferId = offer.Id;
-                        }
-                    }else if(offer.Discount_Type__c == 'Quantity' && qualify){
+  					 if(offer.Discount_Type__c == 'Quantity' && qualify){
                         if(offer.Buy__c <= orderitem.Quantity){
                             discount = offer.Get__c * orderitem.UnitPrice;
                             
@@ -175,6 +150,6 @@ public without sharing class ApplyOrderLineOffers {
                 orderitem.Discount_Amount__c = discountAmount;
                 orderitem.Applied_Offer__c = appliedOffer;
             }
-        //}
+        
     }
 }

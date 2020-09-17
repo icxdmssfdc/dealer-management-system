@@ -67,7 +67,7 @@ public class ICXOrderNotifications {
                       
                     }
                  //Sending the message to dealer if Order is placed by salesrep
-                else if(order.Order_Type__c == 'Distributor' && order.Channel__c == 'SalesRep'){
+                else if(order.Order_Type__c == 'Dealer' && order.Channel__c == 'SalesRep'){
                     message = 'SalesRep '+UserInfo.getName() +' is requesting Approval for an Order'+order.OrderNumber+'With order amount: '+order.TotalAmount;
                     if(mobileno != null && message != null){
                         ICXTwilioSMSService.send(mobileno, message);

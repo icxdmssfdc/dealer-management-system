@@ -6,6 +6,7 @@ public class ICXTwilioSMSService {
         string token = '';
         String fromPhNumber = '';  
         
+        // Added SID and Token using metadata
         Twillio_Setting__mdt twilliodata =[SELECT accountSid__c,token__c,fromPhNumber__c from Twillio_Setting__mdt where MasterLabel = 'ICXTwilioSMSService'];
         
          accountSid = twilliodata.accountSid__c;
