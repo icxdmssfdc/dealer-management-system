@@ -47,7 +47,7 @@
             <targetReference>Inventory_Details</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <description>Order Record Id</description>
         <name>recordId</name>

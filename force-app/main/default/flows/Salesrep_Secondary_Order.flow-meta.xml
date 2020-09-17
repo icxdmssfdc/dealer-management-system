@@ -110,8 +110,8 @@
     <recordCreates>
         <name>Create_Order</name>
         <label>Create Order</label>
-        <locationX>318</locationX>
-        <locationY>205</locationY>
+        <locationX>221</locationX>
+        <locationY>206</locationY>
         <assignRecordIdToReference>OrderId</assignRecordIdToReference>
         <connector>
             <targetReference>RetailerPricebookRecordtypeId</targetReference>
@@ -119,7 +119,7 @@
         <inputAssignments>
             <field>AccountId</field>
             <value>
-                <elementReference>AccountId</elementReference>
+                <elementReference>recordId</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -145,8 +145,8 @@
     <recordLookups>
         <name>CartItems</name>
         <label>CartItems</label>
-        <locationX>715</locationX>
-        <locationY>198</locationY>
+        <locationX>706</locationX>
+        <locationY>212</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Item</targetReference>
@@ -165,8 +165,8 @@
     <recordLookups>
         <name>Get_OrderPartnerRecordTypeId</name>
         <label>Get OrderPartnerRecordTypeId</label>
-        <locationX>198</locationX>
-        <locationY>209</locationY>
+        <locationX>97</locationX>
+        <locationY>207</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Create_Order</targetReference>
@@ -185,8 +185,8 @@
     <recordLookups>
         <name>RetailerPricebookRecordtypeId</name>
         <label>RetailerPricebookRecordtypeId</label>
-        <locationX>428</locationX>
-        <locationY>206</locationY>
+        <locationX>363</locationX>
+        <locationY>211</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>UpdatePriceBook</targetReference>
@@ -228,7 +228,7 @@
     <recordUpdates>
         <name>UpdatePriceBook</name>
         <label>UpdatePriceBook</label>
-        <locationX>528</locationX>
+        <locationX>476</locationX>
         <locationY>206</locationY>
         <connector>
             <targetReference>Show_Products</targetReference>
@@ -249,58 +249,10 @@
         <object>Order</object>
     </recordUpdates>
     <screens>
-        <name>New_Order</name>
-        <label>New Order</label>
-        <locationX>56</locationX>
-        <locationY>212</locationY>
-        <allowBack>false</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>false</allowPause>
-        <connector>
-            <targetReference>Get_OrderPartnerRecordTypeId</targetReference>
-        </connector>
-        <fields>
-            <name>AccountDetails</name>
-            <extensionName>flowruntime:lookup</extensionName>
-            <fieldType>ComponentInstance</fieldType>
-            <inputParameters>
-                <name>required</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>objectApiName</name>
-                <value>
-                    <stringValue>Order</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>label</name>
-                <value>
-                    <elementReference>AccountName</elementReference>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>fieldApiName</name>
-                <value>
-                    <stringValue>Retailer_Account__c</stringValue>
-                </value>
-            </inputParameters>
-            <isRequired>true</isRequired>
-            <outputParameters>
-                <assignToReference>AccountId</assignToReference>
-                <name>recordId</name>
-            </outputParameters>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
         <name>Show_Products</name>
         <label>Show Products</label>
-        <locationX>626</locationX>
-        <locationY>201</locationY>
+        <locationX>607</locationX>
+        <locationY>210</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -326,7 +278,7 @@
         <locationX>50</locationX>
         <locationY>50</locationY>
         <connector>
-            <targetReference>New_Order</targetReference>
+            <targetReference>Get_OrderPartnerRecordTypeId</targetReference>
         </connector>
     </start>
     <status>Active</status>
@@ -359,5 +311,13 @@
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Account Record Id.</description>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
     </variables>
 </Flow>

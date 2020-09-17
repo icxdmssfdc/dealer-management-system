@@ -5,6 +5,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>FetchPriceBookProducts</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>ICXOrderNotifications</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -17,7 +21,27 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>TestCheckProductInventory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestCreditMeterGraphic</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestFetchPriceBookProducts</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TestOrderNotification</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestSInventoryDetails</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>sInventoryDetails</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>

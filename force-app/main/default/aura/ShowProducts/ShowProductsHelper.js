@@ -3,9 +3,9 @@
         var action = cmp.get('c.getProduts'); 
         // method name i.e. getEntity should be same as defined in apex class
         // params name i.e. entityType should be same as defined in getEntity method
-        action.setParams({
+       /* action.setParams({
             "PriceBookId" : cmp.get('v.PriceBookId')
-        });
+        });*/
         action.setCallback(this, function(a){
             var state = a.getState(); // get the response state
             if(state == 'SUCCESS') {

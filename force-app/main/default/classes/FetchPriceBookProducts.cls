@@ -1,11 +1,10 @@
 public with sharing class FetchPriceBookProducts {
-    public FetchPriceBookProducts() {
-
-    }
-     
+    
     @AuraEnabled
-    public static list<PricebookEntry> getProduts(String PriceBookId){
-        list<PricebookEntry> products = [select Product2Id, Product2.Name, Product2.Description, UnitPrice, ProductCode from PricebookEntry where Pricebook2Id = :PriceBookId];
+    public static list<PricebookEntry> getProduts(){
+        Pricebook_Setting__mdt retPriceBookId = [SELECT PBRecordTypeId__c from Pricebook_Setting__mdt where MasterLabel = 'RetailerPBRT'];
+        
+        list<PricebookEntry> products = [select Product2Id, Product2.Name, Product2.Description, UnitPrice, ProductCode from PricebookEntry where Pricebook2Id = :retPriceBookId.Id];
         return products;
     }
 

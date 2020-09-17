@@ -112,7 +112,7 @@ public with sharing class sInventoryDetails {
                // if (
                // Pricebook2.SObjectType.getDescribe().isAccessible() && Schema.SObjectType.Pricebook2.fields.Id.isAccessible()&& Schema.SObjectType.Pricebook2.fields.Name.isAccessible()
                // ) {
-            Pricebook2 standardBook = [SELECT Id FROM Pricebook2 WHERE Name = 'Standard Price Book'];
+          //  Pricebook2 standardBook = [SELECT Id FROM Pricebook2 WHERE Name = 'Standard Price Book'];
                // }
             Order newOrder = new Order();
             if(acc != null){
@@ -163,4 +163,4 @@ public with sharing class sInventoryDetails {
         }
     }
     
-    }
+   }

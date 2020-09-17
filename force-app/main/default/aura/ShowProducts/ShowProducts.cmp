@@ -1,7 +1,7 @@
 <aura:component implements="lightning:availableForFlowScreens,flexipage:availableForAllPageTypes" access="global" controller="FetchPriceBookProducts">
     <!-- attributes -->
     
-    <aura:attribute name="PriceBookId" type="String" default="$CustomMetadata.Pricebook_Setting__mdt.RetailerPBRT.PBRecordTypeId__c" access="global"/><!--"01s2v00000NK6jqAAD"-->
+    <aura:attribute name="PriceBookId" type="String" default="" access="global"/><!--"01s2v00000NK6jqAAD"-->
     <aura:attribute name="data" type="PricebookEntry[]" />
     <aura:attribute name="SelectedProducts" type="String" access="global"/>
     <aura:attribute name="columns" type="List"/>
