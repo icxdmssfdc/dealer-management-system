@@ -50,7 +50,7 @@ public class TestSInventoryDetails {
         
         
         
-        sInventoryDetails.generateInvOrder(dealerAccnt.id,getQueryRetInv);
+       // sInventoryDetails.generateInvOrder(dealerAccnt.id,getQueryRetInv);
         
     }
     

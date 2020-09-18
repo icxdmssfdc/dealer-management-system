@@ -5,73 +5,63 @@
         
         //Getting Retailer Account
         Account retailerAccnt = TestDataFactory.createRetailerAccount(dealerAccnt.Id);
-
+        
         //Creating Product
         Product2 prod = TestDataFactory.createProduct('Test Fruit Juice');
-		prod.Max_Qty__c=300;
-        prod.Min_Qty__c=180;
+        prod.Max_Qty__c=500;
+        prod.Min_Qty__c=200;
         update prod;
         
         //Creating Standard Pricebook
         Id standardPBook =Test.getStandardPricebookId(); 
         
-        //Creating PricebookEntry
+       //Creating PricebookEntry
         PricebookEntry standardPrice = TestDataFactory.createPricebookEntry(100,prod.Id);
-
-        //Creating Inventory
-        Inventory__c newInv=new Inventory__c();
+        
+		 //Inventory creation
+      /*  Inventory__c newInv=new Inventory__c();
+        //insert newInv;        
         newInv.Distributor__c=dealerAccnt.id;
-        newInv.OnHand_Qty__c=200;
+        newInv.OnHand_Qty__c=150;
         newInv.Product__c=prod.id;
-        newInv.Price_Book__c=standardPBook;//standardPb.id;//dealer pricebook
-        newInv.Dealer_Product_Price__c=standardPrice.UnitPrice;//DstandardPrice.UnitPrice;
+        newInv.Price_Book__c=standardPBook;
+        newInv.Dealer_Product_Price__c=standardPrice.UnitPrice;
         
-        newInv.Retailer_Price_Book__c=standardPBook;//RetailerPb.id;//retailer pricebook
-        newInv.Retailer_Price__c=standardPrice.UnitPrice;//retailerPbEntry.UnitPrice;
+        newInv.Retailer_Price_Book__c=standardPBook;
+        newInv.Retailer_Price__c=standardPrice.UnitPrice;
         insert newInv;
-        system.debug('inventory values are'+newInv);
-        system.debug('forupdate inventory');   
-        newInv.Retailer_Price__c=standardPrice.UnitPrice;//retailerPbEntry.UnitPrice;
-        update newInv;
         
+        newInv.OnHand_Qty__c=150;
+        update newInv;*/
+       
         //Retailer Order creation
         Id orderRTRetlr = Schema.SObjectType.Order.getRecordTypeInfosByName().get('Retailer').getRecordTypeId();
 		Order retOrder=TestDataFactory.createOrder(retailerAccnt.id, orderRTRetlr);
+        retOrder.Account__c=dealerAccnt.Id;
+        update retOrder; 
         
         //Order item creation goes here
         OrderItem i = new OrderItem();       
         i.OrderId = retOrder.id;
         i.Product2id = prod.id;
-        i.PricebookEntryId=standardPrice.Id;//standardPBook.id;//pbe.Id ;//standardPrice.id;
-        i.Quantity = 25;//i.icxdms__Order_Record_Type__c=orderRTRet.id;
+        i.PricebookEntryId=standardPrice.Id;
+        i.Quantity = 25;
         i.UnitPrice = 100;    
         insert i; 
-        system.debug('values insertdsfasd are'+i);
-        //system.assertEquals(2500,o.TotalAmount);
+      
         retOrder.Status='Booked';
         update retOrder;
         
-        System.assertEquals(null,newInv.Current_OnHand_Qty__c);//175
+       // System.assertEquals(null,newInv.Current_OnHand_Qty__c);//175
         
         if(retOrder.Status=='Booked'){
             system.debug('i am booked');
-            System.assertEquals(null,newInv.Shipment_Quantity__c);//25
+           // System.assertEquals(null,newInv.Shipment_Quantity__c);//25
         }
         
-        retOrder.Status='Out For Delivery';update retOrder;
-        if(retOrder.Status=='Out For Delivery')
-        {
-            system.debug('STATUS IS i am out for delivery '+retOrder.Status);
-        }
-        
-        //upsert o;
-        if(retOrder.Status=='Out For Delivery')
-        {           
-            System.assertEquals(200,newInv.OnHand_Qty__c);
-            Inventory__c invFields=[SELECT Shipment_Quantity__c FROM Inventory__c WHERE id=:newInv.id];
-            System.assertEquals(null,newInv.Shipment_Quantity__c);//25                        
-        }
-        
+        retOrder.Status='Out For Delivery';
+        update retOrder;
+                
     }
 
 }

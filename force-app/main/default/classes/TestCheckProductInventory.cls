@@ -57,6 +57,8 @@ public class TestCheckProductInventory {
         //Dealer  Order creation
         Id orderDealerRecTypId = Schema.SObjectType.Order.getRecordTypeInfosByName().get('Dealer').getRecordTypeId();
         Order dealerOrder=TestDataFactory.createOrder(dealerAccnt.Id, orderDealerRecTypId);
+        dealerOrder.Status='Draft';
+        update dealerOrder;
         
         // Order Item Creation
 		OrderItem dealeroi=new OrderItem(Product2Id=prod.Id,Quantity=100,OrderId=dealerOrder.id,UnitPrice=100,ListPrice=100,PricebookEntryId=standardPrice.id);       
